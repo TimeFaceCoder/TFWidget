@@ -14,8 +14,6 @@ import android.widget.TextView;
 
 /**
  * @author wxw
- * @from 2015/9/15
- * @TODO ImageView + TextView 组件
  */
 public class DrawableTextView extends LinearLayout {
 

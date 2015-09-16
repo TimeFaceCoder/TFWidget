@@ -1,13 +1,37 @@
 apply plugin: 'com.android.library'
 
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'drawabletextview'
+
+    publishedGroupId = 'cn.timeface.widget'
+    libraryName = 'DrawableTextView'
+    artifact = 'drawabletextview'
+
+    libraryDescription = 'A library that include ImageView & TextView.'
+
+    siteUrl = 'https://github.com/TimeFaceCoder/TFWidget'
+    gitUrl = 'https://github.com/TimeFaceCoder/TFWidget.git'
+
+    libraryVersion = "1.0.0"
+
+    developerId = 'timeface'
+    developerName = 'Xiao Wei Wang'
+    developerEmail = 'sglyapp@timeface.cn'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
 android {
-    compileSdkVersion 22
-    buildToolsVersion "22.0.1"
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
 
     defaultConfig {
         minSdkVersion 14
-        targetSdkVersion 22
-        versionCode 1
+        targetSdkVersion 23
+        versionCode 20150916
         versionName "1.0.0"
     }
     buildTypes {
@@ -19,5 +43,7 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
 }
+
+apply from: '../install.gradle'
+apply from: '../bintray.gradle'
